@@ -20,13 +20,13 @@
   <form class="w-75 mx-auto">
     <p class="mt-3">1. 現在W早稲田ゼミの高等部の塾生ですか？</p>
     <div>
-      <input type="radio" name="student" value="yes" required>はい</label><br>
-      <input type="radio" name="student" value="no" >いいえ</label>
+      <input type="radio" name="student" value="塾生" required>はい</label><br>
+      <input type="radio" name="student" value="外部生" >いいえ</label>
     </div><br>
     <p class="mt-3">2. 入力者は生徒様ですか？保護者様ですか？</p>
     <div>
-      <input type="radio" name="relationship" value="himself/herself">生徒</label><br>
-      <input type="radio" name="relationship" value="parent">保護者</label>
+      <input type="radio" name="relationship" value="生徒">生徒</label><br>
+      <input type="radio" name="relationship" value="保護者">保護者</label>
     </div>
     <br>
     <h5>
@@ -100,7 +100,7 @@
                 const school = $('input[name="school"]').val();
                 const grade = $('input[name="grade"]').val();
                 const relationship = $('input[name="relationship"]').val();
-                const formType = 'liffUserInfo';
+                const formType = '＜ユーザー登録情報＞';
                 const msg = `${formType}\n${name}\n${bangou}\n${shushoujou}\n${keika}\n${hatunetu}`;
                 sendText(msg);
                 return false;
