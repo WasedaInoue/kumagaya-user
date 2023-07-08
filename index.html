@@ -101,7 +101,7 @@
                 const grade = $('input[name="grade"]').val();
                 const relationship = $('input[name="relationship"]').val();
                 const formType = '＜ユーザー登録情報＞';
-                const msg = `${formType}\n${student}\n${sei}\n${mei}\n${school}\n${grade}\n${relationship}`;
+                const msg = formType + '\n' + student + '\n' + sei + '\n' + mei + '\n' + school + '\n' + grade + '\n' + relationship;
                 sendText(msg);
                 return false;
             });
