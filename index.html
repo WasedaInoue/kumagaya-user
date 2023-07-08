@@ -20,7 +20,7 @@
   <form class="w-75 mx-auto">
     <p class="mt-3">1. 現在W早稲田ゼミの高等部の塾生ですか？</p>
     <div>
-      <input type="radio" name="student" value="塾生" required>はい</label><br>
+      <input type="radio" name="student" value="塾生">はい</label><br>
       <input type="radio" name="student" value="外部生" >いいえ</label>
     </div><br>
     <p class="mt-3">2. 入力者は生徒様ですか？保護者様ですか？</p>
@@ -53,7 +53,7 @@
     <br>
     ＜個人情報の取り扱いについて＞<br>
     　お預かりするお客様情報は、当社の各種商品サービスのご提供、ご案内、企画開発などに利用します。また、各種商品サービス提供を目的に個人情報の取り扱いを外部へ委託する場合、委託先の管理体制について厳重に確認します。以上を承諾の上、ご登録ください。<br>
-      株式会社早稲田学習研究会<br>
+      <div style="text-align: end;">株式会社早稲田学習研究会</div><br>
     <input type="submit" class="mt-4 btn btn-primary" value="登録">
   </form>
 
@@ -94,12 +94,12 @@
 
         $(function () {
             $('form').submit(function () {
-                const student = $('input[name="student"]').val();
+                const student = $('input[name="student"]:checked').val();
                 const sei = $('input[name="sei"]').val();
                 const mei = $('input[name="mei"]').val();
                 const school = $('input[name="school"]').val();
-                const grade = $('input[name="grade"]').val();
-                const relationship = $('input[name="relationship"]').val();
+                const grade = $('input[name="grade"]:checked').val();
+                const relationship = $('input[name="relationship"]:checked').val();
                 const formType = '＜ユーザー登録情報＞';
                 const msg = formType + '\n' + student + '\n' + sei + '\n' + mei + '\n' + school + '\n' + grade + '\n' + relationship;
                 sendText(msg);
