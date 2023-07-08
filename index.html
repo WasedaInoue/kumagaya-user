@@ -12,18 +12,18 @@
 </head>
 
 <body>
-  <div style="display:inline-block; background:#fcfcff; padding:15px; border:5px solid #3b5998; border-radius:10px; word-break:break-all;">
-  <h2 style="text-align:center">
+  <div style="text-align: center;"><div style="display:inline-block; border: 4px double #48AADC; padding: 15px;">
+  <h1 style="text-align:center">
     <font color="blue">ユーザー登録</font>
-  </h2><br></div>
-  	<font color='red' style="text-align:center">※全項目回答必須です。</font>
+  </h1></div><br>
+    <font color='red'>※全項目回答必須です※</font></div>
   <form class="w-75 mx-auto">
-    <p class="mt-3">現在W早稲田ゼミの高等部の塾生ですか？</p>
+    <p class="mt-3">1. 現在W早稲田ゼミの高等部の塾生ですか？</p>
     <div>
       <input type="radio" name="student" value="yes" required>はい</label><br>
       <input type="radio" name="student" value="no" >いいえ</label>
     </div><br>
-    <p class="mt-3">入力者は生徒様ですか？保護者様ですか？</p>
+    <p class="mt-3">2. 入力者は生徒様ですか？保護者様ですか？</p>
     <div>
       <input type="radio" name="relationship" value="himself/herself">生徒</label><br>
       <input type="radio" name="relationship" value="parent">保護者</label>
@@ -32,19 +32,19 @@
     <h5>
       <font color="red">入力者が保護者様の場合は、お子様の情報を以下にご入力ください。</font>
     </h5> 
-    <p class="mt-3">姓(全角ひらがな)をご入力ください。</p>
+    <p class="mt-3">4. 姓(全角ひらがな)をご入力ください。</p>
     <div>
       <input type="text" form-control w-100 mt-1" name="sei" placeholder="すずき" pattern="^[ぁ-ん]+$" required>
     </div><br>
-    <p class="mt-3">名(全角ひらがな)をご入力ください。</p>
+    <p class="mt-3">5. 名(全角ひらがな)をご入力ください。</p>
     <div>
       <input type="text" form-control w-100 mt-1" name="mei" placeholder="いちろう" pattern="^[ぁ-ん]+$" required>
     </div><br>
-    <p class="mt-3">高校名(ワセ高などの略称は不可)をご入力ください</p>
+    <p class="mt-3">6. 高校名(ワセ高などの略称は不可)をご入力ください</p>
     <div>
       <input type="text" form-control w-100 mt-1" name="school" placeholder="ワセダ高校" pattern="^[ぁ-ん]+$" required>
     </div><br>
-    <p class="mt-3">学年をお選びください。</p>
+    <p class="mt-3">7. 学年をお選びください。</p>
     <div>
       <input type="radio" name="grade" value="高1">高1</label><br>
       <input type="radio" name="grade" value="高2">高2</label><br>
