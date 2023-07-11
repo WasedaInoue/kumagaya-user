@@ -16,12 +16,13 @@
   <h1 style="text-align:center">
     <font color="blue">ユーザー登録</font>
   </h1></div><br>
-    <font color='red'>※全項目回答必須です※</font></div>
+    <font color='red'>※塾生の方は全項目回答必須です※<br>
+      ※塾外生の方は*の項目は回答必須です※</font></div>
   <form class="w-75 mx-auto">
-    <p class="mt-3">1. 現在W早稲田ゼミの高等部の塾生ですか？</p>
+    <p class="mt-3">1. 現在W早稲田ゼミの高等部の塾生ですか？*</p>
     <div>
-      <input type="radio" name="student" value="塾生">はい</label><br>
-      <input type="radio" name="student" value="外部生" >いいえ</label>
+      <input type="radio" name="student" value="塾生" required>はい</label><br>
+      <input type="radio" name="student" value="外部生">いいえ</label>
     </div><br>
     <p class="mt-3">2. 入力者は生徒様ですか？保護者様ですか？</p>
     <div>
@@ -30,27 +31,26 @@
     </div>
     <br>
     <h5>
-      <font color="red">入力者が保護者様の場合は、お子様の情報を以下にご入力ください。</font>
-    </h5> 
+      <font color="red">入力者が保護者様の場合は、お子様の情報を以下にご入力ください。*</font>
+    </h5>
+    <p class="mt-3">7. 学年をお選びください。*</p>
+    <div>
+      <input type="radio" name="grade" value="高1" required>高1</label><br>
+      <input type="radio" name="grade" value="高2">高2</label><br>
+      <input type="radio" name="grade" value="高3">高3</label>
+    </div><br>
     <p class="mt-3">4. 姓(全角ひらがな)をご入力ください。</p>
     <div>
-      <input type="text" form-control w-100 mt-1" name="sei" placeholder="すずき" pattern="^[ぁ-ん]+$" required>
+      <input type="text" form-control w-100 mt-1" name="sei" placeholder="すずき" pattern="^[ぁ-ん]+$">
     </div><br>
     <p class="mt-3">5. 名(全角ひらがな)をご入力ください。</p>
     <div>
-      <input type="text" form-control w-100 mt-1" name="mei" placeholder="いちろう" pattern="^[ぁ-ん]+$" required>
+      <input type="text" form-control w-100 mt-1" name="mei" placeholder="いちろう" pattern="^[ぁ-ん]+$">
     </div><br>
     <p class="mt-3">6. 高校名(ワセ高などの略称は不可)をご入力ください</p>
     <div>
-      <input type="text" form-control w-100 mt-1" name="school" placeholder="ワセダ高校" required>
+      <input type="text" form-control w-100 mt-1" name="school" placeholder="ワセダ高校">
     </div><br>
-    <p class="mt-3">7. 学年をお選びください。</p>
-    <div>
-      <input type="radio" name="grade" value="高1">高1</label><br>
-      <input type="radio" name="grade" value="高2">高2</label><br>
-      <input type="radio" name="grade" value="高3">高3</label>
-    </div>
-    <br>
     ＜個人情報の取り扱いについて＞<br>
     　お預かりするお客様情報は、当社の各種商品サービスのご提供、ご案内、企画開発などに利用します。また、各種商品サービス提供を目的に個人情報の取り扱いを外部へ委託する場合、委託先の管理体制について厳重に確認します。以上を承諾の上、ご登録ください。<br>
       <div style="text-align: end;">株式会社早稲田学習研究会</div><br>
