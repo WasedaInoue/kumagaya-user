@@ -96,22 +96,18 @@
             $('form').submit(function () {
                 var arr_checkBoxes = document.getElementsByClassName("check");
                 var count = 0;
+                var grade = '';
                 for (let i = 0; i < arr_checkBoxes.length; i++) {
                     if (arr_checkBoxes[i].checked) {
                         count++;
-                    }
-                }
+                        grade += arr_checkBoxes[i].value + " ";
+                    };
+                };
                 if (count > 0) {
                   var student = $('input[name="student"]:checked').val();
                   var sei = $('input[name="sei"]').val();
                   var mei = $('input[name="mei"]').val();
                   var school = $('input[name="school"]').val();
-                  var grade = '';
-                  for ( i = 0; i < arr_checkBoxes.length; i++) {
-                      if ( arr_checkBoxes[i].checked === true ) {
-                          str += arr_checkBoxes[i].value + " ";
-                      };
-                  };
                   var relationship = $('input[name="relationship"]:checked').val();
                   var formType = '＜ユーザー登録情報＞';
                   var msg = formType + '\n' + student + '\n' + sei + '\n' + mei + '\n' + school + '\n' + grade + '\n' + relationship;
