@@ -16,7 +16,7 @@
   <h1 style="text-align:center">
     <font color="blue">ユーザー登録</font>
   </h1></div><br>
-    <font color='red'>※塾生の方は全項目回答必須です※<br>
+    <font color='red'>成績アップにつながる無料イベントや<br>お得な特典情報を受け取るのに必要です。<br><br>※塾生の方は全項目回答必須です※<br>
       ※塾外生の方は*の項目は回答必須です※</font></div>
   <form class="w-75 mx-auto">
     <p class="mt-3">1. 現在W早稲田ゼミの高等部の塾生ですか？<font color='red'>*</font></p>
@@ -35,9 +35,9 @@
     </h5>
     <p class="mt-3">3. 今年の4月からの学年をお選びください。<font color='red'>*</font></p>
     <div>
-      <input type="radio" name="grade" value="高1" required>高1</label><br>
-      <input type="radio" name="grade" value="高2">高2</label><br>
-      <input type="radio" name="grade" value="高3">高3</label>
+      <input type="checkbox" class="check" name="grade" value="高1">高1</label><br>
+      <input type="checkbox" class="check" name="grade" value="高2">高2</label><br>
+      <input type="checkbox" class="check" name="grade" value="高3">高3</label>
     </div><br>
     <p class="mt-3">4. 姓(全角ひらがな)をご入力ください。</p>
     <div>
@@ -94,16 +94,28 @@
 
         $(function () {
             $('form').submit(function () {
-                const student = $('input[name="student"]:checked').val();
-                const sei = $('input[name="sei"]').val();
-                const mei = $('input[name="mei"]').val();
-                const school = $('input[name="school"]').val();
-                const grade = $('input[name="grade"]:checked').val();
-                const relationship = $('input[name="relationship"]:checked').val();
-                const formType = '＜ユーザー登録情報＞';
-                const msg = formType + '\n' + student + '\n' + sei + '\n' + mei + '\n' + school + '\n' + grade + '\n' + relationship;
-                sendText(msg);
-                return false;
+                let arr_checkBoxes = document.getElementsByClassName("check");
+                let count = 0;
+                for (let i = 0; i < arr_checkBoxes.length; i++) {
+                    if (arr_checkBoxes[i].checked) {
+                        count++;
+                    }
+                }
+                if (count > 0) {
+                  const student = $('input[name="student"]:checked').val();
+                  const sei = $('input[name="sei"]').val();
+                  const mei = $('input[name="mei"]').val();
+                  const school = $('input[name="school"]').val();
+                  const grade = $('input[name="grade"]:checked').val();
+                  const relationship = $('input[name="relationship"]:checked').val();
+                  const formType = '＜ユーザー登録情報＞';
+                  const msg = formType + '\n' + student + '\n' + sei + '\n' + mei + '\n' + school + '\n' + grade + '\n' + relationship;
+                  sendText(msg);
+                  return false;
+                } else {
+                  window.alert("学年を1つ以上選択してください。");
+                  return false;
+                };
             });
         });
 
