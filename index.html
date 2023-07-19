@@ -94,22 +94,27 @@
 
         $(function () {
             $('form').submit(function () {
-                let arr_checkBoxes = document.getElementsByClassName("check");
-                let count = 0;
+                var arr_checkBoxes = document.getElementsByClassName("check");
+                var count = 0;
                 for (let i = 0; i < arr_checkBoxes.length; i++) {
                     if (arr_checkBoxes[i].checked) {
                         count++;
                     }
                 }
                 if (count > 0) {
-                  const student = $('input[name="student"]:checked').val();
-                  const sei = $('input[name="sei"]').val();
-                  const mei = $('input[name="mei"]').val();
-                  const school = $('input[name="school"]').val();
-                  const grade = $('input[name="grade"]:checked').val();
-                  const relationship = $('input[name="relationship"]:checked').val();
-                  const formType = '＜ユーザー登録情報＞';
-                  const msg = formType + '\n' + student + '\n' + sei + '\n' + mei + '\n' + school + '\n' + grade + '\n' + relationship;
+                  var student = $('input[name="student"]:checked').val();
+                  var sei = $('input[name="sei"]').val();
+                  var mei = $('input[name="mei"]').val();
+                  var school = $('input[name="school"]').val();
+                  var grade = '';
+                  for ( i = 0; i < 3; i++) {
+                      if ( arr_checkBoxes[i].checked === true ) {
+                          str += arr_checkBoxes[i].value + " ";
+                      };
+                  };
+                  var relationship = $('input[name="relationship"]:checked').val();
+                  var formType = '＜ユーザー登録情報＞';
+                  var msg = formType + '\n' + student + '\n' + sei + '\n' + mei + '\n' + school + '\n' + grade + '\n' + relationship;
                   sendText(msg);
                   return false;
                 } else {
