@@ -107,7 +107,7 @@
                   var mei = $('input[name="mei"]').val();
                   var school = $('input[name="school"]').val();
                   var grade = '';
-                  for ( i = 0; i < 3; i++) {
+                  for ( i = 0; i < arr_checkBoxes.length; i++) {
                       if ( arr_checkBoxes[i].checked === true ) {
                           str += arr_checkBoxes[i].value + " ";
                       };
