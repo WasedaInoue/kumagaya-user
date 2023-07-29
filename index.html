@@ -109,6 +109,9 @@
                   var mei = $('input[name="mei"]').val();
                   var school = $('input[name="school"]').val();
                   var relationship = $('input[name="relationship"]:checked').val();
+                  if(relationship == 'undefined'){
+                    relataionship = '';
+                  };
                   var formType = '＜ユーザー登録情報＞';
                   var msg = formType + '\n' + student + '\n' + sei + '\n' + mei + '\n' + school + '\n' + grade + '\n' + relationship;
                   sendText(msg);
